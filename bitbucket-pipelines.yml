@@ -1,0 +1,56 @@
+image: sleavely/node-awscli:18.x
+
+definitions:
+  steps:
+    - step: &build
+        name: Build and Compress
+        caches:
+          - node
+          - pip
+        script:
+          - npm install
+          - npm run build
+
+    - step: &update-package-version
+        name: Update package version
+        caches:
+          - node
+        script:
+          - npm config set sign-git-tag false
+          - npm version $NPM_SEMANTIC_RELEASE -m "[skip ci] Released new version %s"
+          - declare -x VERSION=$(jq -r '.version' package.json)
+          - echo $VERSION
+          - git push
+          - git push --tags
+
+    - step: &generate-changelog
+        name: Generate changelog
+        caches:
+          - node
+        script:
+          - git pull
+          - npm run changelog
+          - git add CHANGELOG.md
+          - git commit -m "[skip ci] generate changelog" || echo "No changes to commit"
+          - git push
+
+    - step: &deploy
+        name: Release to AWS CodeArtifact
+        caches:
+          - node
+        script:
+          - aws codeartifact login --tool npm --repository frontend-libraries --domain heiland --namespace @heiland
+          - git pull
+          - npm install
+          - npm run build
+          - npm publish
+
+pipelines:
+  custom:
+    deploy:
+      - variables:
+          - name: NPM_SEMANTIC_RELEASE
+      - step: *build
+      - step: *update-package-version
+      - step: *generate-changelog
+      - step: *deploy

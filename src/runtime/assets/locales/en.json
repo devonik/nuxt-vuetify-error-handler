@@ -1,0 +1,10 @@
+
+{
+  "button": {
+    "register": "Register",
+    "login": "Login",
+    "save": "Save",
+    "add": "Add",
+    "edit": "Edit"
+  }
+}
