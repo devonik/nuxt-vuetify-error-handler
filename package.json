@@ -11,6 +11,20 @@
       "require": "./dist/module.cjs"
     }
   },
+  "homepage": "https://github.com/devonik/nuxt-vuetify-error-handler#readme",
+  "bugs": {
+    "url" : "https://github.com/devonik/nuxt-vuetify-error-handler/issues",
+    "email" : "niklas.grieger@devnik.dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/devonik/nuxt-vuetify-error-handler.git"
+  },
+  "author": {
+    "name" : "devnik",
+    "email" : "niklas.grieger@devnik.dev",
+    "url" : "https://devnik.dev/"
+  },
   "main": "./dist/module.cjs",
   "types": "./dist/types.d.ts",
   "files": [
