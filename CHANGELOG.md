@@ -1,6 +1,17 @@
 # Changelog
 
 
+## v1.1.0
+
+
+### 🚀 Enhancements
+
+  - Add type for snackbarPayload, remove blue color from close button (c069edd)
+
+### ❤️  Contributors
+
+- Niklas Grieger <niklas.grieger@devnik.dev>
+
 ## v1.0.6
 
 ## v1.0.5
