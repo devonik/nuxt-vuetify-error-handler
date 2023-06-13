@@ -8,7 +8,6 @@
   
     <template #actions>
       <v-btn
-        color="blue"
         variant="text"
         @click="store.isVisible = false"
       >
