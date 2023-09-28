@@ -10,17 +10,9 @@ declare module "#app" {
     $snackbar: {
       /**
        * This function triggers the snackbar with some options
-       * @param text Then text the snackbar shows. Default is "notification"
-       * @param timeout Define in milliseconds how long the snackbar is shown. Default is 8000
-       * @param color The color style for the snackbar. See vuetify doc v-snackbar for more. The value can be a theme color or anything else. Default is "info"
-       * @param closeText Then text for snackbar close action
+       * @param payload Object to control snackbar options {@link SnackbarPayload}
        */
-      showMessage(
-        text: string,
-        timeout?: number,
-        color?: string,
-        closeText?: string
-      ): SnackbarPayload;
+      showMessage(payload: SnackbarPayload): void;
       /**
        * This function triggers the snackbar with predefined options. Timeout = 8000, text = "Funktion noch nicht implementiert", color = "info", isVisible = true
        */
@@ -30,11 +22,15 @@ declare module "#app" {
 }
 
 export interface SnackbarPayload {
-  timeout: number;
+  //Then text the snackbar shows. Default is "notification"
   text: string;
-  color: string;
-  isVisible: boolean;
-  closeText: string;
+  //Optional. Define in milliseconds how long the snackbar is shown. Default is 8000
+  timeout?: number;
+  //Optional. The color style for the snackbar. See vuetify doc v-snackbar for more. The value can be a theme color or anything else. Default is "info"
+  color?: string;
+  isVisible?: boolean;
+  //Optional. Then text for snackbar close action
+  closeText?: string;
 }
 
 export default defineNuxtPlugin((nuxtApp) => {
