@@ -1,5 +1,5 @@
 import { defineStore } from "pinia";
-import { SnackbarPayload } from "../types";
+import type { SnackbarPayload } from "../module";
 
 function defaultOptions() {
   return {
@@ -7,6 +7,7 @@ function defaultOptions() {
     timeout: 8000,
     text: "info",
     color: "notification",
+    closeText: "Close",
   };
 }
 export const state = () => ({
@@ -24,6 +25,7 @@ export const useSnackbarStore = defineStore("snackbar", {
       this.text = payload.text;
       this.color = payload.color;
       this.isVisible = true;
+      this.closeText = payload.closeText;
     },
   },
 });

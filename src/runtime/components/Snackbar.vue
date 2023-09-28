@@ -1,3 +1,10 @@
+
+  
+<script setup lang="ts">
+  import { useSnackbarStore } from "../stores/snackbar";
+  const store = useSnackbarStore();
+</script>
+
 <template>
   <v-snackbar
     v-model="store.isVisible"
@@ -5,23 +12,17 @@
     :color="store.color"
   >
     {{ store.text }}
-  
+    
     <template #actions>
       <v-btn
         variant="text"
         @click="store.isVisible = false"
-      >
-        <!--{{ $t("general.close") }}-->
-        Close
+      > 
+        {{ store.closeText }}
       </v-btn>
-    </template>
+    </template> 
   </v-snackbar>
 </template>
   
-  <script setup>
-  import { useSnackbarStore } from "../stores/snackbar";
-  const store = useSnackbarStore();
-  </script>
-  
-  <style scoped></style>
+<style scoped></style>
   
