@@ -7,19 +7,19 @@ declare module "#app" {
      * This plugin contains functions to trigger vuetify snackbar
      * @param msg The message the snackbar shows
      */
-    $snackbar(msg: string): {
+    $snackbar: {
       /**
        * This function triggers the snackbar with some options
-       * @param timeout Define in milliseconds how long the snackbar is shown. Default is 8000
        * @param text Then text the snackbar shows. Default is "notification"
+       * @param timeout Define in milliseconds how long the snackbar is shown. Default is 8000
        * @param color The color style for the snackbar. See vuetify doc v-snackbar for more. The value can be a theme color or anything else. Default is "info"
        * @param closeText Then text for snackbar close action
        */
       showMessage(
-        timeout: number,
         text: string,
-        color: string,
-        closeText: string
+        timeout?: number,
+        color?: string,
+        closeText?: string
       ): SnackbarPayload;
       /**
        * This function triggers the snackbar with predefined options. Timeout = 8000, text = "Funktion noch nicht implementiert", color = "info", isVisible = true
