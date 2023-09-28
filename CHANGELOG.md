@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.1.4
+
+[compare changes](https://github.com/devonik/nuxt-vuetify-error-handler/compare/v1.1.3...v1.1.4)
+
+### 🌊 Types
+
+- ShowMessage function make props optional ([0fb8d34](https://github.com/devonik/nuxt-vuetify-error-handler/commit/0fb8d34))
+
+### ❤️ Contributors
+
+- Niklas Grieger <niklas.grieger@devnik.dev>
+
 ## v1.1.3
 
 [compare changes](https://github.com/devonik/nuxt-vuetify-error-handler/compare/v1.1.2...v1.1.3)

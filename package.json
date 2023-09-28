@@ -1,6 +1,6 @@
 {
   "name": "nuxt-vuetify-error-handler",
-  "version": "1.1.3",
+  "version": "1.1.4",
   "description": "This project provides a nuxt plugin with error handler that send errors to a vuetify v-snackbar component",
   "license": "MIT",
   "type": "module",
