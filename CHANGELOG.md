@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.1.5
+
+[compare changes](https://github.com/devonik/nuxt-vuetify-error-handler/compare/v1.1.4...v1.1.5)
+
+### 🌊 Types
+
+- Fix showMessage type ([6c5a6b4](https://github.com/devonik/nuxt-vuetify-error-handler/commit/6c5a6b4))
+
+### ❤️ Contributors
+
+- Niklas Grieger <niklas.grieger@devnik.dev>
+
 ## v1.1.4
 
 [compare changes](https://github.com/devonik/nuxt-vuetify-error-handler/compare/v1.1.3...v1.1.4)
