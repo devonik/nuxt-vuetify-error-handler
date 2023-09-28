@@ -1,6 +1,22 @@
 # Changelog
 
 
+## v1.1.1
+
+[compare changes](https://github.com/devonik/nuxt-vuetify-error-handler/compare/v1.1.0...v1.1.1)
+
+### 🚀 Enhancements
+
+- Add prop closeText to enable control for snackbar close action text ([472bb23](https://github.com/devonik/nuxt-vuetify-error-handler/commit/472bb23))
+
+### 🌊 Types
+
+- Add types for snackbar plugin ([bba7c67](https://github.com/devonik/nuxt-vuetify-error-handler/commit/bba7c67))
+
+### ❤️ Contributors
+
+- Niklas Grieger <niklas.grieger@devnik.dev>
+
 ## v1.1.0
 
 
